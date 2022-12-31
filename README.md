@@ -35,7 +35,7 @@ This is a template for a server side API project using `Django Rest framework` +
 
 ## Workflow
 
-Commit changes when Docker is running:
+### Commit changes when Docker is running:
 
 - Grab the container ID:
 	```
@@ -50,8 +50,8 @@ Commit changes when Docker is running:
 	docker compose up --build
 	```
 
-Execute Django tasks with Docker Compose:
-
+### Execute Django tasks with Docker Compose:
+- We can use the Django CLI with Docker Compose while Docker is running
 	```
 	docker compose exec web python manage.py <command>
 	```
