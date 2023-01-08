@@ -7,3 +7,5 @@
 venv/
 # Front end
 frontend/
+
+**/.idea
