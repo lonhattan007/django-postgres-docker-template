@@ -1,5 +1,5 @@
-# Pull base image 
-FROM python:3.8-slim-bullseye 
+# Pull base image
+FROM python:3.8-bullseye
 
 # Set environment variables
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
@@ -11,8 +11,8 @@ WORKDIR /usr/src/app
 
 # Install dependencies
 COPY ./requirements.txt .
-RUN apt-get update \
-	&& apt-get -y install libpq-dev gcc
+RUN apt-get update && \
+	apt-get install -y libpq-dev gcc
 RUN pip install -r requirements.txt
 
 # Copy project
